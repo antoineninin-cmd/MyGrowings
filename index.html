@@ -4,123 +4,294 @@
   <meta charset="UTF-8" />
   <title>MyGrowings – Urban Gardening Blog by VeggieBox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MyGrowings by VeggieBox — tips, guides, and small-space ideas to grow green at home. Urban gardening made easy for balconies, kitchens, and tiny apartments." />
+  <meta name="description" content="MyGrowings by VeggieBox — urban gardening tips, apartment ideas, and plant care inspiration." />
 
-  <!-- Cookiebot (put first in <head> on every page) -->
+  <!-- Cookiebot -->
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e654d6a4-7b00-426b-8a39-e09ae229d0f4" type="text/javascript" async></script>
-  <!-- For auto blocking until consent, add data-blockingmode="auto" to the script above -->
 
-  <!-- Google tag (gtag.js) — one per page -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLTVW4YKS5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-WLTVW4YKS5');
   </script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Open Graph -->
   <meta property="og:title" content="MyGrowings – Urban Gardening Blog" />
-  <meta property="og:description" content="Urban gardening tips, balcony setups, and eco ideas for small spaces." />
+  <meta property="og:description" content="Tips, ideas, and inspiration for growing plants in your apartment." />
+  <meta property="og:image" content="urban.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="../plants.webp" />
-  <meta property="og:url" content="https://antoineninin-cmd.github.io/VEGGIEBOX/mygrowings/" />
 
   <style>
-    :root{
-      --green:#4CAF50; --green-dark:#2f6e33; --brown:#9B6B43; --black:#121212;
-      --bg: radial-gradient(circle at top, #f9f8f4 0%, #f3eee4 60%, #fefefe 100%);
-      --card:#fff; --radius:1.2rem; --shadow:0 14px 40px rgba(0,0,0,.06);
+    :root {
+      /* Softer, calmer palette */
+      --green: #8BBF99;
+      --green-dark: #5E8E6F;
+      --clay: #B88C66;
+      --ivory: #F6F5F0;
+      --black: #1A1A1A;
+      --bg: radial-gradient(circle at top, #f6f5f0 0%, #f0eee8 60%, #fafafa 100%);
+      --card: #fff;
+      --radius: 1.2rem;
+      --shadow: 0 14px 40px rgba(0, 0, 0, .06);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;font-family:"Poppins",sans-serif;background:var(--bg);color:var(--black);-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
 
     /* Header */
-    header{
-      position:sticky;top:0;z-index:50;background:rgba(249,248,244,.95);
-      backdrop-filter: blur(10px); border-bottom:1px solid rgba(0,0,0,.04)
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(246, 245, 240, .97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
     }
-    .nav{
-      max-width:1180px;margin:0 auto;padding:.8rem 1.1rem;display:flex;align-items:center;gap:1rem;justify-content:space-between
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: .8rem 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .brand{display:flex;align-items:center;gap:.55rem;font-weight:600}
-    .brand-icon{
-      width:36px;height:36px;border-radius:1rem;display:grid;place-items:center;
-      background:linear-gradient(150deg,var(--green) 0%, #bff0c6 100%); color:#fff;font-weight:700;box-shadow:0 10px 24px rgba(76,175,80,.32)
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
     }
-    .nav-right{display:flex;align-items:center;gap:.8rem}
-    .btn{
-      background:linear-gradient(140deg,var(--green) 0%, #7bd986 100%); color:#fff;border:none;border-radius:999px;
-      padding:.5rem 1.1rem; font-weight:500; cursor:pointer; box-shadow:0 12px 24px rgba(76,175,80,.35)
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 1rem;
+      background: linear-gradient(140deg, var(--green-dark), var(--green));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(94,142,111,.25);
     }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: .9rem;
+    }
+    .btn {
+      background: linear-gradient(140deg, var(--green-dark), var(--green));
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: .5rem 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(94,142,111,.3);
+      transition: all .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
 
     /* Layout */
-    .wrap{max-width:1180px;margin:0 auto;padding:2rem 1.1rem}
-    .page-title{display:flex;justify-content:space-between;gap:1rem;align-items:end;flex-wrap:wrap}
-    .page-title h1{margin:0;font-size:clamp(1.8rem,4.5vw,2.4rem);letter-spacing:-.02em}
-    .sub{opacity:.65;font-size:.95rem}
-
-    /* Controls */
-    .controls{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0 1.4rem}
-    .input, .select{
-      background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:.9rem;padding:.55rem .75rem;min-width:220px;font-family:inherit
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 2rem 1.1rem;
     }
-    .tag-cloud{display:flex;gap:.5rem;flex-wrap:wrap}
-    .tag{
-      background:rgba(76,175,80,.1);border:1px solid rgba(76,175,80,.18);padding:.25rem .6rem;border-radius:.9rem;font-size:.8rem;cursor:pointer
+    .page-title {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
     }
-    .tag.active{background:var(--green);color:#fff;border-color:var(--green)}
-
-    /* Grid */
-    .grid{
-      display:grid; gap:1.1rem;
-      grid-template-columns: repeat(3, minmax(0,1fr));
+    .page-title h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--green-dark);
     }
-    @media (max-width: 980px){ .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
-    @media (max-width: 640px){ .grid{ grid-template-columns: 1fr; } }
+    .sub { opacity: .65; font-size: .95rem; }
 
-    .card{
-      background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column
+    /* Ideas Section */
+    .ideas {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.4rem 1.2rem 1.6rem;
+      margin-bottom: 2rem;
     }
-    .card-cover{aspect-ratio: 16/9; background:#eaeaea; object-fit:cover}
-    .card-body{padding:1rem 1rem 1.1rem}
-    .card h3{margin:.1rem 0 .35rem;font-size:1.1rem}
-    .meta{display:flex;gap:.6rem;flex-wrap:wrap;font-size:.8rem;opacity:.7}
-    .excerpt{font-size:.9rem;opacity:.85;margin:.45rem 0 0}
-
-    /* Post view */
-    .post{
-      max-width:860px;margin:0 auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden
+    .ideas-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: .9rem;
     }
-    .post-cover{width:100%;aspect-ratio:16/9;object-fit:cover;background:#eaeaea}
-    .post-inner{padding:1.2rem 1.1rem 1.6rem}
-    .post-title{margin:.2rem 0 .4rem;font-size:clamp(1.6rem,4.2vw,2.1rem);letter-spacing:-.01em}
-    .post-meta{opacity:.7;font-size:.85rem;margin-bottom:.8rem}
-    .post-content{line-height:1.75}
-    .post-content h2{margin:1.2rem 0 .3rem}
-    .post-content p{margin:.6rem 0}
-    .backlink{display:inline-block;margin-top:1rem;color:var(--green-dark);font-weight:600}
+    .ideas-title {
+      font-size: 1.5rem;
+      color: var(--clay);
+      margin: 0;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .chip {
+      background: rgba(139,191,153,.15);
+      border: 1px solid rgba(139,191,153,.25);
+      border-radius: 999px;
+      padding: .3rem .75rem;
+      font-size: .8rem;
+      cursor: pointer;
+    }
+    .chip.active {
+      background: var(--green-dark);
+      color: #fff;
+    }
+    .idea-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .idea-card {
+      background: var(--ivory);
+      border-radius: 1rem;
+      border: 1px solid rgba(0,0,0,.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,.03);
+      overflow: hidden;
+      padding-bottom: .8rem;
+    }
+    .idea-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .idea-inner {
+      padding: .8rem 1rem;
+    }
+    .idea-title {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--green-dark);
+    }
+    .idea-desc {
+      font-size: .9rem;
+      opacity: .8;
+      margin: .3rem 0 .5rem;
+    }
+    .idea-meta {
+      font-size: .8rem;
+      color: var(--clay);
+      margin-bottom: .4rem;
+    }
+    .idea-actions a {
+      color: var(--green-dark);
+      font-weight: 500;
+      font-size: .85rem;
+    }
 
-    /* Footer */
-    footer{ text-align:center; padding:2.2rem 1rem 3rem; font-size:.8rem; opacity:.7 }
+    /* Blog Grid */
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform .2s ease;
+    }
+    .card:hover { transform: translateY(-2px); }
+    .card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin: 0 0 .4rem;
+      color: var(--green-dark);
+    }
+    .meta {
+      font-size: .8rem;
+      opacity: .65;
+      margin-bottom: .4rem;
+    }
+    .excerpt { font-size: .9rem; opacity: .85; }
 
-    /* Helper */
-    .hide{display:none!important}
+    /* Post View */
+    .post {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .post-cover {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .post-inner {
+      padding: 1.2rem 1.4rem;
+    }
+    .post-title {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--green-dark);
+    }
+    .post-meta {
+      font-size: .85rem;
+      opacity: .65;
+      margin-bottom: .8rem;
+    }
+    .post-content { line-height: 1.7; }
+    .backlink {
+      display: inline-block;
+      margin-top: 1.2rem;
+      color: var(--clay);
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem 3rem;
+      font-size: .8rem;
+      opacity: .7;
+    }
+    .hide { display: none !important; }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .page-title { flex-direction: column; align-items: flex-start; }
+      .ideas-title { font-size: 1.3rem; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="nav">
-      <!-- Brand links back to your main site hero -->
-      <a href="../#top" class="brand" title="Back to VeggieBox home">
+      <a href="../#top" class="brand" title="Back to VeggieBox">
         <div class="brand-icon">M</div> MyGrowings
       </a>
       <div class="nav-right">
@@ -130,26 +301,24 @@
     </div>
   </header>
 
-  <!-- List View -->
   <main id="home" class="wrap">
     <div class="page-title">
       <h1>MyGrowings</h1>
-      <div class="sub">Urban gardening for small spaces 🌿</div>
+      <div class="sub">Calm, cozy & green living in small spaces 🌱</div>
     </div>
 
-    <div class="controls">
-      <input id="search" class="input" type="search" placeholder="Search posts (herbs, balcony, soil…)" aria-label="Search posts">
-      <select id="sort" class="select" aria-label="Sort">
-        <option value="new" selected>Newest</option>
-        <option value="old">Oldest</option>
-      </select>
-    </div>
+    <!-- Ideas Section -->
+    <section class="ideas" id="ideas">
+      <div class="ideas-head">
+        <h2 class="ideas-title">Ideas for Your Apartment</h2>
+        <div class="chips" id="ideaChips"></div>
+      </div>
+      <div class="idea-grid" id="ideaGrid"></div>
+    </section>
 
-    <div id="tagCloud" class="tag-cloud"></div>
-    <div id="grid" class="grid" aria-live="polite"></div>
+    <div id="grid" class="grid"></div>
   </main>
 
-  <!-- Post View -->
   <section id="postView" class="wrap hide">
     <article class="post">
       <img id="postCover" class="post-cover" alt="">
@@ -157,187 +326,139 @@
         <h1 id="postTitle" class="post-title"></h1>
         <div id="postMeta" class="post-meta"></div>
         <div id="postContent" class="post-content"></div>
-        <a href="#/" class="backlink">← Back to all posts</a>
+        <a href="#/" class="backlink">← Back to posts</a>
       </div>
     </article>
   </section>
 
   <footer>
-    © MyGrowings by VeggieBox — Urban gardening for everyone.
+    © MyGrowings by VeggieBox — Urban Gardening Blog.
   </footer>
 
   <script>
-  // --------------------------------
-  // Blog data — add or edit posts 👇
-  // --------------------------------
-  const posts = [
-    {
-      slug: "balcony-herb-garden-starter",
-      title: "Your First Balcony Herb Garden: A 30-Minute Setup",
-      date: "2025-09-18",
-      author: "VeggieBox Team",
-      tags: ["herbs","balcony","beginner"],
-      excerpt: "No garden? No problem. Start with basil, mint, and chives in three small pots — sunlight + steady watering is all you need.",
-      cover: "../plants.webp",
-      content: `
-        <p>Starting an herb garden on a balcony is the fastest way to get wins as a beginner.
-        Choose <strong>3 herbs</strong>: basil (sun-loving), mint (tolerant), and chives (hardy).</p>
-        <h2>What you need</h2>
-        <ul>
-          <li>3 pots (ø 14–18 cm) with drainage</li>
-          <li>Light potting mix + a small bag of compost</li>
-          <li>Seeds or young plants</li>
-        </ul>
-        <p>Mix 3 parts potting soil with 1 part compost. Water thoroughly after planting.
-        Keep the soil moist (not soggy) and rotate pots weekly for even light.</p>
-        <h2>Pro tip</h2>
-        <p>Harvest often! Frequent trimming makes herbs bushier and tastier.</p>
-      `
-    },
-    {
-      slug: "low-light-plants-kitchen",
-      title: "Best Edibles for Low-Light Kitchens",
-      date: "2025-10-05",
-      author: "Laura @ VeggieBox",
-      tags: ["indoor","low light","kitchen"],
-      excerpt: "North-facing window? Try parsley, mint, and microgreens. Here’s how to keep them thriving with minimal sun.",
-      cover: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
-      content: `
-        <p>Low light doesn't mean no greens. Prioritize <em>parsley</em>, <em>mint</em>, and <em>microgreens</em>.
-        They tolerate fewer hours of sun and bounce back from missed waterings.</p>
-        <h2>Light hacks</h2>
-        <p>Place pots within 60 cm of the window. Use a clip-on LED grow light (10–20W) for darker months.</p>
-        <h2>Watering</h2>
-        <p>Use the knuckle test: water when the top 2 cm feel dry. Overwatering is worse than underwatering.</p>
-      `
-    },
-    {
-      slug: "soil-vs-coco-coir",
-      title: "Soil vs. Coco Coir for Small Pots",
-      date: "2025-10-22",
-      author: "Antoine @ VeggieBox",
-      tags: ["substrate","tips","eco"],
-      excerpt: "Coco coir is airy and renewable, but it needs nutrients. Soil is forgiving. See which one fits your setup.",
-      cover: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop",
-      content: `
-        <p><strong>Soil</strong> is nutrient-rich and beginner-friendly. <strong>Coco coir</strong> is light, drains well, and is renewable, 
-        but requires a liquid feed.</p>
-        <h2>Quick recommendation</h2>
-        <ul>
-          <li>Beginners: 80% potting soil + 20% compost</li>
-          <li>Tinkerers: coco coir + slow-release fertilizer</li>
-        </ul>
-        <p>Whichever you choose, ensure drainage holes and a saucer. Roots need air!</p>
-      `
-    }
-  ];
+    const ideas = [
+      {
+        title: "Balcony Vegetable Box",
+        space: "balcony",
+        difficulty: "Medium",
+        time: "30–40 min",
+        desc: "Grow lettuce, carrots, and herbs in a recycled container. Perfect for balconies with morning sun.",
+        link: "#/post/balcony-herb-garden-starter",
+        image: "balcony.jpg"
+      },
+      {
+        title: "Bathroom Jungle",
+        space: "bathroom",
+        difficulty: "Easy",
+        time: "20 min",
+        desc: "Turn a humid bathroom into a tropical nook with pothos, philodendrons, and ferns.",
+        link: "#/",
+        image: "urban.png"
+      },
+      {
+        title: "Indoor Smart Garden",
+        space: "kitchen",
+        difficulty: "Medium",
+        time: "25 min",
+        desc: "Use LED grow lights to raise greens and peppers indoors — a compact, year-round setup.",
+        link: "#/",
+        image: "indoor.jpg"
+      }
+    ];
+    const ideaSpaces = ["all", "balcony", "bathroom", "kitchen"];
 
-  // ---------------
-  // Mini blog engine
-  // ---------------
-  const $ = (sel)=>document.querySelector(sel);
-  const grid = $("#grid");
-  const postView = $("#postView");
-  const home = $("#home");
-  const tagCloud = $("#tagCloud");
-  const search = $("#search");
-  const sortSel = $("#sort");
-
-  // Build tag cloud
-  const allTags = [...new Set(posts.flatMap(p => p.tags))].sort((a,b)=>a.localeCompare(b));
-  const state = { q:"", tag:null, sort:"new" };
-
-  function renderTags(){
-    tagCloud.innerHTML = "";
-    const mk = (name,label=name)=>{
-      const s = document.createElement("button");
-      s.className = "tag"; s.type="button"; s.textContent = label;
-      if(state.tag===name) s.classList.add("active");
-      s.addEventListener("click", ()=>{
-        state.tag = (state.tag===name)? null : name;
-        renderList();
-        renderTags();
-        location.hash = "#/"; // keep in list view
+    function renderIdeas(active="all") {
+      const chips = document.getElementById("ideaChips");
+      const grid = document.getElementById("ideaGrid");
+      chips.innerHTML = "";
+      ideaSpaces.forEach(s => {
+        const btn = document.createElement("button");
+        btn.className = "chip" + (s===active ? " active" : "");
+        btn.textContent = s[0].toUpperCase()+s.slice(1);
+        btn.onclick = () => renderIdeas(s);
+        chips.appendChild(btn);
       });
-      return s;
-    };
-    tagCloud.appendChild(mk(null,"All"));
-    allTags.forEach(t=> tagCloud.appendChild(mk(t)));
-  }
-
-  function formatDate(iso){
-    const d = new Date(iso+"T00:00:00");
-    return d.toLocaleDateString(undefined, {year:"numeric", month:"short", day:"numeric"});
-  }
-
-  function renderList(){
-    const q = state.q.trim().toLowerCase();
-    const filtered = posts.filter(p=>{
-      const matchesQ = !q || p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q) || p.content.toLowerCase().includes(q);
-      const matchesTag = !state.tag || p.tags.includes(state.tag);
-      return matchesQ && matchesTag;
-    }).sort((a,b)=> state.sort==="new" ? (b.date.localeCompare(a.date)) : (a.date.localeCompare(b.date)));
-
-    grid.innerHTML = filtered.map(p=>`
-      <article class="card">
-        <a href="#/post/${p.slug}" aria-label="${p.title}">
-          <img class="card-cover" src="${p.cover}" alt="">
-          <div class="card-body">
-            <h3>${p.title}</h3>
-            <div class="meta">
-              <span>${formatDate(p.date)}</span>
-              <span>•</span>
-              <span>${p.tags.map(t=>`#${t}`).join(" ")}</span>
-            </div>
-            <p class="excerpt">${p.excerpt}</p>
+      const filtered = ideas.filter(i => active==="all" ? true : i.space===active);
+      grid.innerHTML = filtered.map(i => `
+        <article class="idea-card">
+          <img src="${i.image}" alt="${i.title}">
+          <div class="idea-inner">
+            <h3 class="idea-title">${i.title}</h3>
+            <p class="idea-desc">${i.desc}</p>
+            <div class="idea-meta">⏱ ${i.time} · ⭐ ${i.difficulty}</div>
+            <div class="idea-actions"><a href="${i.link}">Learn more →</a></div>
           </div>
-        </a>
-      </article>
-    `).join("");
+        </article>
+      `).join("");
+    }
 
-    // Toggle views
-    home.classList.remove("hide");
-    postView.classList.add("hide");
+    const posts = [
+      {
+        slug: "balcony-herb-garden-starter",
+        title: "Your First Balcony Herb Garden: A 30-Minute Setup",
+        date: "2025-09-18",
+        author: "VeggieBox Team",
+        tags: ["herbs","balcony","beginner"],
+        excerpt: "No garden? No problem. Start with basil, mint, and chives in three small pots — sunlight + steady watering is all you need.",
+        cover: "balcony.jpg",
+        content: `
+          <p>Starting an herb garden on a balcony is the fastest way to get wins as a beginner.
+          Choose <strong>3 herbs</strong>: basil (sun-loving), mint (tolerant), and chives (hardy).</p>
+          <h2>What you need</h2>
+          <ul>
+            <li>3 pots (ø 14–18 cm) with drainage</li>
+            <li>Light potting mix + a small bag of compost</li>
+            <li>Seeds or young plants</li>
+          </ul>
+          <p>Mix 3 parts potting soil with 1 part compost. Water thoroughly after planting.
+          Keep the soil moist (not soggy) and rotate pots weekly for even light.</p>
+          <h2>Pro tip</h2>
+          <p>Harvest often! Frequent trimming makes herbs bushier and tastier.</p>
+        `
+      }
+    ];
 
-    // Update meta
-    document.title = "MyGrowings – Urban Gardening Blog";
-    const desc = document.querySelector('meta[name="description"]');
-    if(desc) desc.setAttribute("content", "MyGrowings by VeggieBox — tips, guides, and small-space ideas to grow green at home.");
-  }
+    function renderList() {
+      const grid = document.getElementById("grid");
+      grid.innerHTML = posts.map(p => `
+        <article class="card">
+          <a href="#/post/${p.slug}">
+            <img src="${p.cover}" alt="${p.title}">
+            <div class="card-body">
+              <h3>${p.title}</h3>
+              <div class="meta">${p.date} · ${p.author}</div>
+              <p class="excerpt">${p.excerpt}</p>
+            </div>
+          </a>
+        </article>
+      `).join("");
+    }
 
-  function renderPost(slug){
-    const p = posts.find(x=>x.slug===slug);
-    if(!p){ location.hash = "#/"; return; }
+    function renderPost(slug) {
+      const p = posts.find(x => x.slug === slug);
+      if(!p) return;
+      document.getElementById("postCover").src = p.cover;
+      document.getElementById("postTitle").textContent = p.title;
+      document.getElementById("postMeta").textContent = `${p.date} · ${p.author}`;
+      document.getElementById("postContent").innerHTML = p.content;
+      document.getElementById("home").classList.add("hide");
+      document.getElementById("postView").classList.remove("hide");
+    }
 
-    $("#postCover").src = p.cover;
-    $("#postCover").alt = p.title;
-    $("#postTitle").textContent = p.title;
-    $("#postMeta").textContent = `${formatDate(p.date)} · ${p.author} · ${p.tags.map(t=>"#"+t).join(" ")}`;
-    $("#postContent").innerHTML = p.content;
+    function router() {
+      const [_, route, slug] = location.hash.split("/");
+      if(route === "post" && slug) renderPost(slug);
+      else {
+        document.getElementById("home").classList.remove("hide");
+        document.getElementById("postView").classList.add("hide");
+        renderIdeas("all");
+        renderList();
+      }
+    }
 
-    home.classList.add("hide");
-    postView.classList.remove("hide");
-
-    // Update SEO-ish bits for share
-    document.title = `${p.title} – MyGrowings`;
-    const desc = document.querySelector('meta[name="description"]');
-    if(desc) desc.setAttribute("content", p.excerpt || "MyGrowings blog post");
-  }
-
-  function router(){
-    const [_, route, slug] = location.hash.split("/");
-    if(route==="post" && slug){ renderPost(slug); }
-    else { renderList(); }
-  }
-
-  // Events
-  window.addEventListener("hashchange", router);
-  search.addEventListener("input", ()=>{ state.q = search.value; renderList(); });
-  sortSel.addEventListener("change", ()=>{ state.sort = sortSel.value; renderList(); });
-
-  // Init
-  renderTags();
-  router();
+    window.addEventListener("hashchange", router);
+    renderIdeas();
+    renderList();
   </script>
 </body>
 </html>
