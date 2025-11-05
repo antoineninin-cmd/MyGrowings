@@ -31,7 +31,6 @@
 
   <style>
     :root {
-      /* Softer, calmer palette */
       --green: #8BBF99;
       --green-dark: #5E8E6F;
       --clay: #B88C66;
@@ -87,23 +86,6 @@
       font-weight: 700;
       box-shadow: 0 10px 25px rgba(94,142,111,.25);
     }
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: .9rem;
-    }
-    .btn {
-      background: linear-gradient(140deg, var(--green-dark), var(--green));
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      padding: .5rem 1.2rem;
-      font-weight: 500;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(94,142,111,.3);
-      transition: all .2s ease;
-    }
-    .btn:hover { transform: translateY(-1px); }
 
     /* Layout */
     .wrap {
@@ -284,6 +266,7 @@
     @media (max-width: 640px) {
       .page-title { flex-direction: column; align-items: flex-start; }
       .ideas-title { font-size: 1.3rem; }
+      .nav { flex-direction: column; align-items: flex-start; gap: .5rem; }
     }
   </style>
 </head>
@@ -291,20 +274,16 @@
 
   <header>
     <div class="nav">
-      <a href="../#top" class="brand" title="Back to VeggieBox">
+      <a href="https://antoineninin-cmd.github.io/VEGGIEBOX/" class="brand" title="Back to VeggieBox">
         <div class="brand-icon">M</div> MyGrowings
       </a>
-      <div class="nav-right">
-        <a href="#/" class="sub">Blog</a>
-        <a href="../#contact" class="btn">Join Us</a>
-      </div>
     </div>
   </header>
 
   <main id="home" class="wrap">
     <div class="page-title">
       <h1>MyGrowings</h1>
-      <div class="sub">Calm, cozy & green living in small spaces 🌱</div>
+      <div class="sub">Stories, guides & green ideas for your apartment 🌿</div>
     </div>
 
     <!-- Ideas Section -->
@@ -326,26 +305,17 @@
         <h1 id="postTitle" class="post-title"></h1>
         <div id="postMeta" class="post-meta"></div>
         <div id="postContent" class="post-content"></div>
-        <a href="#/" class="backlink">← Back to posts</a>
+        <a href="https://antoineninin-cmd.github.io/VEGGIEBOX/" class="backlink">← Back to VeggieBox</a>
       </div>
     </article>
   </section>
 
   <footer>
-    © MyGrowings by VeggieBox — Urban Gardening Blog.
+    © MyGrowings by VeggieBox – Urban Gardening Blog.
   </footer>
 
   <script>
     const ideas = [
-      {
-        title: "Balcony Vegetable Box",
-        space: "balcony",
-        difficulty: "Medium",
-        time: "30–40 min",
-        desc: "Grow lettuce, carrots, and herbs in a recycled container. Perfect for balconies with morning sun.",
-        link: "#/post/balcony-herb-garden-starter",
-        image: "balcony.jpg"
-      },
       {
         title: "Bathroom Jungle",
         space: "bathroom",
@@ -353,6 +323,15 @@
         time: "20 min",
         desc: "Turn a humid bathroom into a tropical nook with pothos, philodendrons, and ferns.",
         link: "#/",
+        image: "balcony.jpg"
+      },
+      {
+        title: "Balcony Vegetable Box",
+        space: "balcony",
+        difficulty: "Medium",
+        time: "30–40 min",
+        desc: "Grow lettuce, carrots, and herbs in a recycled container. Perfect for balconies with morning sun.",
+        link: "#/post/balcony-herb-garden-starter",
         image: "urban.png"
       },
       {
@@ -400,7 +379,7 @@
         author: "VeggieBox Team",
         tags: ["herbs","balcony","beginner"],
         excerpt: "No garden? No problem. Start with basil, mint, and chives in three small pots — sunlight + steady watering is all you need.",
-        cover: "balcony.jpg",
+        cover: "urban.png",
         content: `
           <p>Starting an herb garden on a balcony is the fastest way to get wins as a beginner.
           Choose <strong>3 herbs</strong>: basil (sun-loving), mint (tolerant), and chives (hardy).</p>
@@ -414,6 +393,7 @@
           Keep the soil moist (not soggy) and rotate pots weekly for even light.</p>
           <h2>Pro tip</h2>
           <p>Harvest often! Frequent trimming makes herbs bushier and tastier.</p>
+          <p><a href="https://antoineninin-cmd.github.io/VEGGIEBOX/" target="_blank" style="color:#5E8E6F;font-weight:500;">← Back to VeggieBox</a></p>
         `
       }
     ];
